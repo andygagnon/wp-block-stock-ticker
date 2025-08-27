@@ -1,0 +1,68 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ */
+
+
+// Base styles for the stock ticker block
+.wp-block-create-block-stock-ticker {
+	background-color: #f9f9f9;
+	border: 1px solid #e0e0e0;
+	padding: 1.5rem;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	color: #333;
+
+	// Use a CSS variable for the accent color
+	--accent-color: #2c974b;
+}
+
+// Styles for the content inside the block
+.stock-ticker-content {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+
+	.stock-ticker-company {
+		font-size: 1.5rem;
+		font-weight: 600;
+		margin: 0 0 0.5rem 0;
+		color: var(--accent-color);
+	}
+
+	p {
+		margin: 0;
+	}
+
+	.stock-ticker-label {
+		font-weight: 500;
+		color: #666;
+	}
+
+	.stock-ticker-price {
+		font-size: 1.25rem;
+		font-weight: 700;
+	}
+}
+
+// Loading state styles
+.stock-ticker-loading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	font-style: italic;
+	color: #999;
+}
+
+// Error state styles
+.stock-ticker-error {
+	color: #d9534f;
+	font-weight: 500;
+	text-align: center;
+	background-color: #fde8e7;
+	padding: 1rem;
+	border-radius: 4px;
+}
